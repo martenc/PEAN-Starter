@@ -1,4 +1,4 @@
-# PEAN Starter (node, express, angular, parse)
+# PEAN (node, express, angular, parse)
 
 This is a starter appliation built on the PEAN Stack (which now exists). Follow the steps below and you'll have a decent foundation for building your application. 
 
