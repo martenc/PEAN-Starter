@@ -1,6 +1,6 @@
 # PEAN Starter (node, express, angular, parse)
 
-This is a repo for a starter appliation for a PEAN Stack application. Just download and install and you have a good foundation for building application. 
+This is a starter appliation built on the PEAN Stack (which now exists). Follow the steps below and you'll have a decent foundation for building your application. 
 
 ## Installation
 1. Download the repository
