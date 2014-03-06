@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+
+	<title>PEAN Starter Node, Angular, Express, Parse</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/animate.css/animate.min.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+	<!-- JS -->
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+	
+	<!-- HEADER -->
+	<nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">PEAN</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="/#/about">About</a></li>
+			<li><a href="/#/contact">Contact</a></li>
+			{{#if loggedin}}
+			<li><a href="/profile">Welcome, {{body.username}}</a></li>
+			<li><a href="/logout">(logout)</a></li>
+			{{else}}
+			<li><a href="/login">Login</a></li>
+			{{/if}}
+			{{#if admin}}
+			<li><a href="/roles">Roles</a></li>
+			<li><a href="/users">Users</a></li>
+			{{/if}}
+		</ul>
+	</nav>
+
+	<!-- ANGULAR DYNAMIC CONTENT -->
+	<!-- <div ng-view></div> -->
+
+
+<div class="jumbotron text-center">
+	<h1>Edit Your Profile</h1>
+
+<!-- <p>{{body.updatedAt}}</p> -->
+(You may not change your username)
+
+</div>
+
+
+<form class="form-horizontal" action="/profile" method="post">
+	<input type="hidden" id="objectid" name="objectid" value="{{body.objectId}}">
+
+<fieldset>
+
+<!-- Form Name -->
+<!-- <legend>Edit Your Profile</legend> -->
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="usernameinput">First Name</label>  
+  <div class="col-md-4">
+  <input id="firstname" name="firstname" type="text" value="{{body.firstName}}" class="form-control input-md" required="">
+    
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="usernameinput">Last Name</label>  
+  <div class="col-md-4">
+  <input id="lastname" name="lastname" type="text" value="{{body.lastName}}" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="passwordinput">Password</label>
+  <div class="col-md-4">
+    <input id="password" name="password" type="password" placeholder="{{body.password}}" class="form-control input-md" >
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="loginbutton"></label>
+  <div class="col-md-4">
+    <button id="loginbutton" name="loginbutton" class="btn btn-primary">Update</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+</div>
+
+</body>
+</html>
+
+
+
+

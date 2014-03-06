@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+
+	<title>PEAN Starter Node, Angular, Express, Parse</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/animate.css/animate.min.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+	<!-- JS -->
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+</head>
+<body >
+<div class="container">
+	
+	<!-- HEADER -->
+	<nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">PEAN</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="/#/about">About</a></li>
+			<li><a href="/#/contact">Contact</a></li>
+			{{#if loggedin}}
+			<li><a href="/profile">Welcome, {{username}}</a></li>
+			<li><a href="/logout">(logout)</a></li>
+			{{else}}
+			<li><a href="/login">Login</a></li>
+			{{/if}}
+			{{#if admin}}
+			<li><a href="/roles">Roles</a></li>
+			<li><a href="/users">Users</a></li>
+			{{/if}}
+		</ul>
+	</nav>
+
+	<!-- ANGULAR DYNAMIC CONTENT -->
+	<!-- <div ng-view></div> -->
+
+	
+<div class="jumbotron text-center">
+	<h1>Roles</h1>
+
+<p>
+	{{message}}
+</p>
+</div>
+
+<p>
+<a href="/createrole">Create Role</a>
+</p>
+
+<div class="roles">
+
+  {{#each body}}
+    <div class="roles">
+      <a href="/roledetail/{{objectId}}">{{name}}</a>
+    </div>
+  {{else}}
+  	No roles are present
+  {{/each}}
+
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+

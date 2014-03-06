@@ -1,0 +1,15 @@
+{
+  "name": "starter-node-angular",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^3.4.8",
+    "express-partials": "^0.2.0",
+    "mongoose": "^3.8.8",
+    "kaiseki": "^0.5.3",
+    "hbs": "^2.5.0",
+    "nodemailer": "~0.6.0",
+    "crypto": "0.0.3",
+    "express-hbs": "~0.7.9",
+    "q": "~1.0.0"
+  }
+}
