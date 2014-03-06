@@ -13,7 +13,7 @@ This is a starter appliation built on the PEAN Stack (which now exists). Follow 
 8. Login with your admin user
 
 
-Use this starter kit to build a PEAN stack application.
+Enjoy!
 
 
 ##License
