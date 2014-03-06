@@ -14,26 +14,26 @@ This is a repo for a starter appliation for a PEAN Stack application. Just downl
 
 ##Directory structure:
 
-   |-app
-   |---models
-   |-config
-   |-node_modules
-   |-public
-   |---css
-   |---js
-   |-----controllers
-   |-----services
-   |---libs
-   |-----angular
-   |-----angular-route
-   |-----angular-ui-router
-   |-----animate.css
-   |-----bootstrap
-   |-----font-awesome
-   |-----jquery
-   |-----sizzle
-   |---views
-   |-templates
+|-app
+|---models
+|-config
+|-node_modules
+|-public
+|---css
+|---js
+|-----controllers
+|-----services
+|---libs
+|-----angular
+|-----angular-route
+|-----angular-ui-router
+|-----animate.css
+|-----bootstrap
+|-----font-awesome
+|-----jquery
+|-----sizzle
+|---views
+|-templates
 
 
 Use this starter kit to build a PEAN stack application.
